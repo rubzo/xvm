@@ -1,0 +1,33 @@
+Run: x.py <program name>
+
+(Newlines are ignored.)
+
+l X - load integer X onto top of stack
+s X - load character X onto top of stack
+S X - concatenate character X onto string on top of stack
+
+r X - read the value in variable named 'X' onto the top of the stack
+w X - write the value on the top of the stack into variable named 'X'
+      (also remove this value from the stack)
+
+i   - read an integer from the console, store on top of stack
+p   - print string or value on top of stack to console, removing it
+
+
+d   - put a duplicate of the value on top of the stack...on top of stack
++   - remove two values from the top of the stack, add them together,
+      put result on top of stack
+-   - remove two values from the top of the stack, subtract them,
+      put result on top of stack
+*   - remove two values from the top of the stack, multiply them,
+      put result on top of stack
+
+b X - jump to instruction that is X instructions after this instruction
+      (X can be in hex, so from 1 to e (15))
+B X - jump to instruction that is X instructions BEFORE this instruction
+
+e   - compare two values on top of stack, remember if equal
+E   - compare two values on top of stack, remember if not equal
+
+c X - if previously tested condition was true, do as 'b' instruction
+C X - if previously tested condition was true, do as 'C' instruction
